@@ -34,7 +34,13 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: normal;
-  line-height: 27px; }
+  line-height: 1.69;
+  color: #3e3e3e; }
+
+.container {
+  padding: 0 20px;
+  max-width: 1020px;
+  margin: 0 auto; }
 
 .link {
   color: #0075ff;
@@ -47,7 +53,7 @@ html {
           box-sizing: border-box;
   padding: 21px 65px;
   font-size: 16px;
-  line-height: 14px;
+  line-height: 0.87;
   font-weight: bold;
   color: #0075ff;
   background-color: #fff;
@@ -62,6 +68,45 @@ html {
     -webkit-box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
             box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46); }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .form__input, .form__button {
+    width: 100%; }
+  .form__item {
+    margin-bottom: 16px; }
+  .form__button {
+    margin-top: 16px; }
+
+.input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 17px;
+  font-size: 14px;
+  line-height: 1;
+  background-color: #f7f8ff;
+  border-radius: 8px;
+  border: none; }
+  .input__textarea {
+    font-family: "Roboto", sans-serif;
+    height: 144px;
+    resize: none; }
+  .input::-webkit-input-placeholder {
+    color: #b9c1ce; }
+  .input::-moz-placeholder {
+    color: #b9c1ce; }
+  .input:-ms-input-placeholder {
+    color: #b9c1ce; }
+  .input::-ms-input-placeholder {
+    color: #b9c1ce; }
+  .input::placeholder {
+    color: #b9c1ce; }
+
 .nav {
   text-transform: uppercase; }
   .nav__list {
@@ -71,8 +116,7 @@ html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    list-style: none;
-    margin-bottom: 48px; }
+    list-style: none; }
   .nav__item {
     padding: 8px 24px;
     border-radius: 8px; }
@@ -88,7 +132,7 @@ html {
 .header {
   height: 700px;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   letter-spacing: 2px;
   font-weight: bold;
   color: #fff;
@@ -139,16 +183,18 @@ html {
     bottom: 165px;
     max-width: 328px;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
     letter-spacing: -1.5px; }
     .header__site-title::before {
       content: "";
       position: absolute;
-      top: -16px;
+      top: -18px;
       width: 35px;
       height: 2px;
       border-radius: 2px;
       background-color: #fff; }
+  .header__nav {
+    margin-bottom: 48px; }
 
 .logo {
   width: 115px;
@@ -159,10 +205,13 @@ html {
   background-position: center; }
 
 .section {
-  position: relative;
   padding-bottom: 152px; }
   .section__heading {
     margin: 0 auto 61px; }
+  .section__consultation, .section__testimonials, .section__contact {
+    margin-top: 93px; }
+  .section:last-child {
+    padding-bottom: 88px; }
 
 .info {
   display: grid;
@@ -171,12 +220,15 @@ html {
   .info__heading {
     font-size: 48px;
     line-height: 1;
-    letter-spacing: -1.5px; }
+    letter-spacing: -1.5px;
+    color: #000; }
   .info__subheading {
+    font-size: 24px;
+    line-height: 1.25;
     color: #0075ff;
     margin-bottom: 16px; }
   .info__paragraph {
-    margin-bottom: 23px; }
+    margin-bottom: 30px; }
     .info__paragraph:last-child {
       margin-bottom: 0; }
 
@@ -194,7 +246,8 @@ html {
   width: max-content;
   font-size: 48px;
   line-height: 1;
-  letter-spacing: -1.5px; }
+  letter-spacing: -1.5px;
+  color: #000; }
   .heading::after {
     position: absolute;
     content: url("../images/crown.svg");
@@ -218,12 +271,100 @@ html {
   .photos--wide-right {
     grid-template-columns: 1fr 2fr; }
 
+.consultation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .consultation__text, .consultation__form {
+    width: 413px; }
+  .consultation__subheading {
+    max-width: 240px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #0075ff;
+    margin-bottom: 16px; }
+
+.person {
+  width: 240px;
+  text-align: center; }
+  .person__photo {
+    width: 153px;
+    height: 153px;
+    border-radius: 50%;
+    margin-bottom: 28px; }
+  .person__name {
+    font-size: 24px;
+    line-height: 1.25;
+    color: #0075ff;
+    margin-bottom: 4px; }
+  .person__position {
+    font-size: 14px;
+    line-height: 1.93;
+    color: #9fadc2;
+    margin-bottom: 13px; }
+
+.testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .contact__address, .contact__form {
+    width: 413px; }
+  .contact__address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    height: 180px; }
+  .contact__grid-group {
+    margin-bottom: 24px; }
+  .contact__label {
+    font-size: 14px;
+    line-height: 1.93;
+    color: #9fadc2;
+    margin-bottom: 8px; }
+  .contact__link {
+    color: #3e3e3e; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 359px;
+  background-image: url("../images/footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .footer__logo {
+    margin-bottom: 40px; }
+
 body {
   background: #fff; }
-
-.container {
-  padding: 0 20px;
-  max-width: 1020px;
-  margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
