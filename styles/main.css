@@ -170,7 +170,11 @@ html {
     @media screen and (max-width: 899px) {
       .nav__item {
         margin-bottom: 32px;
-        padding: 0; }
+        padding: 0;
+        -webkit-transition: opacity 0.2s;
+        transition: opacity 0.2s; }
+        .nav__item:hover {
+          opacity: 0.8; }
         .nav__item:last-child {
           margin-bottom: 0; } }
     .nav__item--active {
@@ -439,7 +443,15 @@ html {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
-    border-radius: 8px; }
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s; }
+    .photos__img:hover {
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03); }
     @media screen and (max-width: 425px) {
       .photos__img {
         height: 131px; } }
@@ -478,9 +490,9 @@ html {
       width: 100%; } }
   @media screen and (max-width: 899px) {
     .consultation__text {
-      width: auto;
-      max-width: 700px;
-      margin-bottom: 32px; } }
+      margin-bottom: 32px;
+      -ms-flex-item-align: center;
+          align-self: center; } }
   .consultation__subheading {
     max-width: 240px;
     font-size: 24px;
@@ -490,17 +502,25 @@ html {
 
 .person {
   width: 240px;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
   @media screen and (max-width: 899px) {
     .person {
       margin-bottom: 48px; }
       .person:last-child {
         margin-bottom: 0; } }
+  .person:hover .person__photo {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
   .person__photo {
     width: 153px;
     height: 153px;
     border-radius: 50%;
-    margin-bottom: 28px; }
+    margin-bottom: 28px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s; }
   .person__name {
     font-size: 24px;
     line-height: 1.25;
